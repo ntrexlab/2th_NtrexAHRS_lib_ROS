@@ -120,7 +120,7 @@ namespace ntrex
           deg_value[2] = (int16_t)(((int)(unsigned char)data[6] | (int)(unsigned char)data[7] << 8)) / 100.0;
 
           roll = deg_value[0] * convertor_d2r;
-          pitch = mag_value[1] * convertor_d2r;
+          pitch = deg_value[1] * convertor_d2r;
           yaw = deg_value[2] * convertor_d2r;
 
           tf_orientation = Euler2Quaternion(roll, pitch, yaw);
