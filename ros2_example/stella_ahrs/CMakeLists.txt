@@ -10,6 +10,7 @@ endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
+  #add_compile_options(-Wall -Wextra -Wpedantic -O3 -march=native)
 endif()
 
 ################################################################################
@@ -44,7 +45,7 @@ ament_target_dependencies(stella_ahrs_node
 )
 
 
-target_link_libraries(${PROJECT_NAME}_node ${CMAKE_CURRENT_SOURCE_DIR}/lib/MW_AHRS_aarch64.a)
+target_link_libraries(${PROJECT_NAME}_node ${CMAKE_CURRENT_SOURCE_DIR}/lib/MW_AHRS_amd64.a)
 
 ################################################################################
 # Install
